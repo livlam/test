@@ -1,14 +1,14 @@
 <?php
-	class News_Model extends CI_Model
+	class News_model extends CI_Model
 	{
 		public function __construct()
 		{
-			$this->db->load->database();
+			$this->load->database();
 		}
 		
-		public function get_news($slug = false)
+		public function get_news($slug = FALSE)
 		{
-			if ($slug === false)
+			if ($slug === FALSE)
 			{
 				$query = $this->db->get('news');
 				return $query->result_array();
